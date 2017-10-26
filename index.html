@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Just a simple movie search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="body-wrapper">
+            <div class="body-content flex flex-column color-primary-0">
+                <div class="container top">
+                    <section>
+                        <div class="body-content"><h2>Just a simple movie search engine</h2></div>
+                        <div class="body-content">
+                            <div class="input-list">
+                                <ul class="tab-nav">
+                                    <li id="movie" class="tab-nav-active">  Movie  </li>
+                                    <li id="actor" class="tab-nav-iddle" >  Actor  </li>
+                                </ul>
+                                <ul class="srcMovie">
+                                        <li class="input-list-items flex">
+                                            <span></span> <input class="flex-0" type="text" placeholder="Search movie" id="searchMovie"><span></span>
+                                        </li>                                         
+                                        <li class="input-list-items flex">
+                                                <select id="movieGenres"><option value="">Movie Genres</select>                                        
+                                                <input class="flex-2" type="text" placeholder="Year" id="searchYear">
+                                                <select id="sortbyFilter"><option value="">Filter Options</option></select>
+                                                <div class="flex flex-item-align" id="checkAsdDesc">
+                                                    <span>Order by</span>
+                                                    <input type="radio" value='asc' id="radioAsc" checked><span>Asc</span>
+                                                    <input  type="radio" value='desc' id="radioDesc"><span>Desc</span>
+                                                 </div>                                        
+                                        </li>
+                                </ul>
+                                <ul class="srcActor">
+                                        <li class="input-list-items flex">
+                                            <span></span>  <input class="flex-0" type="text" placeholder="Search an Actor " id="searchActor"><span></span>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="body-content"> 
+                            <div class="button-search flex">
+                                <button class="btn  flex-3 background-color_button color-buttom" id="sendRequest">Search</button> 
+                            </div>
+                    </section>
+                </div>
+                <div class="container details font12">
+                    <section>
+                        <div class="body-content"><span><span></div>
+                        <div class="body-content">
+                            <div class="input-list-details">                                
+                               <div id="wrapper">
+                                   <div id="fixed_div"> 
+                                       <div class="body-content">
+                                           <div class="input-list-details flex">
+                                               <div class="loading">
+                                                   <img src="ajax-loader.gif">
+                                               </div>
+                                               <ul id="popupContent">
+                                                   
+                                               </ul>
+                                           </div>
+                                       </div> 
+                                   </div>
+                               </div>             
+                                <div class="loadingBody">
+                                            <img src="ajax-loader.gif">
+                                        </div>     
+                                <ul id="ulSelect">                                                                   
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="body-content">
+                            <footer><div class="pagination"></div></footer>
+                        </div>            
+                    </section>        
+                </div>
+                    
+            </div>
+        </div>
+    </body>
+</html>
